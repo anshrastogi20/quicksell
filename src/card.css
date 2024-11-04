@@ -1,0 +1,62 @@
+/* SecurityAssessmentCard.css */
+.card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .card-id {
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin: 0px;
+    color: #333;
+  }
+  
+  .card-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .icon {
+    background-color: white;
+    color: black;
+    border: 1px solid #e0e0e0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  .feature-request {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    color: #888;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  .feature-request li {
+    margin: 0;
+  }
