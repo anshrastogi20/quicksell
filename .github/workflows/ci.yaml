@@ -9,28 +9,38 @@ on:
       - main
 
 jobs:
+  lint-sast:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+            node-version: 16
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run SAST Lint
+        run: npm run lint:sast
+
   build:
     runs-on: ubuntu-20.04
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
 
-      # Step 3: Install dependencies
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Run Tests
-    #   - name: Run Tests
-    #     run: npm test
-
-      # Step 5: Build the App
       - name: Build Application
         run: npm run build
