@@ -83,7 +83,7 @@ function App() {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-  const xx=5;
+  // const xx=5;
   return (
     <div className="App">
     <div className="top-strip">
