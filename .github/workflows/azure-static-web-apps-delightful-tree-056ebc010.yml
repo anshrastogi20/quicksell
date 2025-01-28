@@ -44,3 +44,21 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_DELIGHTFUL_TREE_056EBC010 }}
           action: "close"
+
+          # lint-sast:
+          #   runs-on: ubuntu-20.04
+        
+          #   steps:
+          #     - name: Checkout Code
+          #       uses: actions/checkout@v3
+        
+          #     - name: Set up Node.js
+          #       uses: actions/setup-node@v3
+          #       with:
+          #           node-version: 20
+        
+          #     - name: Install Dependencies
+          #       run: npm install
+        
+          #     - name: Run SAST Lint
+          #       run: npx eslint .
