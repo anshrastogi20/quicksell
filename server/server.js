@@ -1,16 +1,16 @@
-const express = require("express");
-const client = require("prom-client");
+import express from "express";
+import { collectDefaultMetrics, register } from "prom-client";
 
 const app = express();
 const PORT = 3030; // Change port if needed
 
 // Enable default system metrics
-client.collectDefaultMetrics();
+collectDefaultMetrics();
 
 // Expose metrics at /metrics
 app.get("/metrics", async (req, res) => {
-  res.set("Content-Type", client.register.contentType);
-  res.end(await client.register.metrics());
+  res.set("Content-Type", register.contentType);
+  res.end(await register.metrics());
 });
 
 app.listen(PORT, () => {
